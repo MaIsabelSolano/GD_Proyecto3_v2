@@ -6,13 +6,7 @@
             "ruta": 0,
             "texto": "ASDF",
             "emisor": "Panchito",
-            "opciones": [
-                {
-                    "num": 1,
-                    "texto": "Op1",
-                    "rutaA": 5
-                }
-            ],
+            "opciones": [],
             "emociones": [
                 {
                     "personaje": "Panchito",
@@ -28,8 +22,73 @@
             "id":  1,
             "escena": 1,
             "ruta": 0,
-            "texto": "ASDF",
-            "emisor": "Panchito",
+            "texto": "mimi",
+            "emisor": "Panchitoo",
+            "opciones": [
+                {
+                    "num": 1,
+                    "texto": "Op1",
+                    "rutaA": 2
+                },
+                {
+                    "num": 2,
+                    "texto": "Op2",
+                    "rutaA": 3
+                }
+            ],
+            "emociones": [
+                {
+                    "personaje": "Panchito",
+                    "emocion": "Panchito_Feliz"
+                },
+                {
+                    "personaje": "Panchitoo",
+                    "emocion": "Panchitoo_Feliz"
+                }
+            ]
+        },
+        {
+            "id":  2,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "asdf",
+            "emisor": "Panchitoo",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Panchito",
+                    "emocion": "Panchito_Feliz"
+                },
+                {
+                    "personaje": "Panchitoo",
+                    "emocion": "Panchitoo_Feliz"
+                }
+            ]
+        },
+        {
+            "id":  3,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "asdf",
+            "emisor": "Panchitoo",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Panchito",
+                    "emocion": "Panchito_Feliz"
+                },
+                {
+                    "personaje": "Panchitoo",
+                    "emocion": "Panchitoo_Feliz"
+                }
+            ]
+        },
+        {
+            "id":  4,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "asdf",
+            "emisor": "Panchitoo",
             "opciones": [],
             "emociones": [
                 {
