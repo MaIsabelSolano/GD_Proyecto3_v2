@@ -64,6 +64,9 @@ public class DialogueMng : MonoBehaviour
         // Reactivar los botones
         showButtons();
       }
+    } else if (Dialogues[currentDialogue].EOS) {
+      // Es el final de la historia
+      // TODO: Añadir lógica de cambio de escena
     }
     else {
       // Click normal si la historia no tiene opciones
@@ -103,19 +106,19 @@ public class DialogueMng : MonoBehaviour
   }
 
   void changeToOp1(){
-    currentDialogue = Dialogues[currentDialogue].opciones[1].rutaA;
+    currentDialogue = Dialogues[currentDialogue].opciones[0].rutaA;
     updateText();
   }
   void changeToOp2(){
-    currentDialogue = Dialogues[currentDialogue].opciones[2].rutaA;
+    currentDialogue = Dialogues[currentDialogue].opciones[1].rutaA;
     updateText();
   }
   void changeToOp3(){
-    currentDialogue = Dialogues[currentDialogue].opciones[3].rutaA;
+    currentDialogue = Dialogues[currentDialogue].opciones[2].rutaA;
     updateText();
   }
   void changeToOp4(){
-    currentDialogue = Dialogues[currentDialogue].opciones[4].rutaA;
+    currentDialogue = Dialogues[currentDialogue].opciones[3].rutaA;
     updateText();
   }
 }
@@ -142,6 +145,7 @@ public class Dialogue
   public string emisor;
   public List<Option> opciones;
   public List<Emotion> emociones;
+  public bool EOS; //End of Story
 }
 
 

@@ -16,7 +16,8 @@
                     "personaje": "Panchitoo",
                     "emocion": "Panchitoo_Feliz"
                 }
-            ]
+            ],
+            "EOS": false
         },
         {
             "id":  1,
@@ -27,12 +28,12 @@
             "opciones": [
                 {
                     "num": 1,
-                    "texto": "Op1",
+                    "texto": "Op1 11111",
                     "rutaA": 2
                 },
                 {
                     "num": 2,
-                    "texto": "Op2",
+                    "texto": "Opcion 2",
                     "rutaA": 3
                 }
             ],
@@ -45,13 +46,14 @@
                     "personaje": "Panchitoo",
                     "emocion": "Panchitoo_Feliz"
                 }
-            ]
+            ],
+            "EOS": false
         },
         {
             "id":  2,
             "escena": 1,
             "ruta": 0,
-            "texto": "asdf",
+            "texto": "Opción 1 seleccinada!!",
             "emisor": "Panchitoo",
             "opciones": [],
             "emociones": [
@@ -63,13 +65,14 @@
                     "personaje": "Panchitoo",
                     "emocion": "Panchitoo_Feliz"
                 }
-            ]
+            ],
+            "EOS": true
         },
         {
             "id":  3,
             "escena": 1,
             "ruta": 0,
-            "texto": "asdf",
+            "texto": "Se seleccionó la opción 2",
             "emisor": "Panchitoo",
             "opciones": [],
             "emociones": [
@@ -81,7 +84,8 @@
                     "personaje": "Panchitoo",
                     "emocion": "Panchitoo_Feliz"
                 }
-            ]
+            ],
+            "EOS": false
         },
         {
             "id":  4,
@@ -99,7 +103,8 @@
                     "personaje": "Panchitoo",
                     "emocion": "Panchitoo_Feliz"
                 }
-            ]
+            ],
+            "EOS": true
         }
     ]
     
