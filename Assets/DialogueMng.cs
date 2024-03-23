@@ -20,6 +20,10 @@ public class DialogueMng : MonoBehaviour
   private List<Button> OptionBtns = new List<Button>();
   private bool OptionsActive;
 
+  private Sprite[] KathySprites;
+
+  [SerializeField] Image imgTest;
+
   public List<Emotion> currentEmotes = new List<Emotion>();
 
   int currentDialogue = 0;
@@ -31,6 +35,16 @@ public class DialogueMng : MonoBehaviour
     // obtener la data del JSON
     if (dialoguesJSON != null) {
       Debug.Log(dialoguesJSON);
+
+
+      Debug.Log(Application.dataPath);
+      KathySprites = Resources.LoadAll<Sprite>("Sprites/Kathy/");
+      Debug.Log(KathySprites.Length);
+      foreach (Sprite s in KathySprites)
+        {
+            // Do something with the sprite
+            Debug.Log(s.name);
+        }
 
       // Deserialize the JSON data into a DialogueList object
       DialogueList dialogueList = JsonUtility.FromJson<DialogueList>(dialoguesJSON.text);
@@ -65,10 +79,12 @@ public class DialogueMng : MonoBehaviour
       if (!OptionsActive) {
         // Reactivar los botones
         showButtons();
+        updateEmotions();
       }
     } else if (Dialogues[currentDialogue].EOS) {
       // Es el final de la historia
       // TODO: Añadir lógica de cambio de escena
+      updateEmotions();
     }
     else {
       // Click normal si la historia no tiene opciones
@@ -94,13 +110,28 @@ public class DialogueMng : MonoBehaviour
     // borrar emociones anteriores
     currentEmotes = new List<Emotion>();
 
-    // Agregar emociones
-    // for (int i = 0; i < Dialogues[currentDialogue].emociones.Count; i++) {
-    //   currentEmotes.Add(Dialogues[currentDialogue].emociones[i].emocion);
-    // }
-
-    currentEmotes = Dialogues[currentDialogue].emociones;
-
+    // Esta solo es una prueba
+    // TODO Modificar para poder usarse con varios sprites a la vez. 
+    Sprite spriteNuevo = null;
+    foreach (Sprite sp in KathySprites) {
+      // Debug.Log("nombre sprite: " + sp.name);
+      if (sp.name == Dialogues[currentDialogue].emociones[0].emocion) {
+        spriteNuevo = sp;
+        Debug.Log("yay");
+      }
+    }
+    if (spriteNuevo == null) {
+      Debug.Log("err");
+    }
+    else {
+      Debug.Log("cambio :o");
+      imgTest.sprite = null;
+      imgTest.sprite = spriteNuevo;
+      
+      // imgTest.color = Color.black;
+    }
+    // currentEmotes = Dialogues[currentDialogue].emociones;
+    
     Debug.Log(Dialogues[currentDialogue].emociones[0].personaje);
     Debug.Log(Dialogues[currentDialogue].emociones[0].emocion);
   }

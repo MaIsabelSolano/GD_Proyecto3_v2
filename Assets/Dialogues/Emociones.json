@@ -10,7 +10,7 @@
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kahty_Sprites_Neutral_0"
+                    "emocion": "Kathy_Sprites_Neutral_0"
                 }
             ],
             "EOS": false
@@ -36,7 +36,7 @@
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kahty_Sprites_Confident_0"
+                    "emocion": "Kathy_Sprites_Confident_0"
                 }
             ],
             "EOS": false
