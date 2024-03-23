@@ -20,6 +20,8 @@ public class DialogueMng : MonoBehaviour
   private List<Button> OptionBtns = new List<Button>();
   private bool OptionsActive;
 
+  public List<Emotion> currentEmotes = new List<Emotion>();
+
   int currentDialogue = 0;
   
   
@@ -75,6 +77,7 @@ public class DialogueMng : MonoBehaviour
         if (currentDialogue < Dialogues.Count && currentDialogue >= 0) {
           currentDialogue ++;
           updateText();
+          updateEmotions();
         }
       }
     }
@@ -85,6 +88,21 @@ public class DialogueMng : MonoBehaviour
     DialogoEmisor.text = Dialogues[currentDialogue].emisor;
     DialogoTexto.text = Dialogues[currentDialogue].texto;
     hideButtons();
+  }
+
+  void updateEmotions() {
+    // borrar emociones anteriores
+    currentEmotes = new List<Emotion>();
+
+    // Agregar emociones
+    // for (int i = 0; i < Dialogues[currentDialogue].emociones.Count; i++) {
+    //   currentEmotes.Add(Dialogues[currentDialogue].emociones[i].emocion);
+    // }
+
+    currentEmotes = Dialogues[currentDialogue].emociones;
+
+    Debug.Log(Dialogues[currentDialogue].emociones[0].personaje);
+    Debug.Log(Dialogues[currentDialogue].emociones[0].emocion);
   }
 
   void hideButtons() {

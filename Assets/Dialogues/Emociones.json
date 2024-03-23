@@ -4,17 +4,13 @@
             "id":  0,
             "escena": 1,
             "ruta": 0,
-            "texto": "ASDF",
-            "emisor": "Panchito",
+            "texto": "Hola, soy Kathy y esta es una prueba de Diálogo",
+            "emisor": "Kathy",
             "opciones": [],
             "emociones": [
                 {
-                    "personaje": "Panchito",
-                    "emocion": "Panchito_Feliz"
-                },
-                {
-                    "personaje": "Panchitoo",
-                    "emocion": "Panchitoo_Feliz"
+                    "personaje": "Kathy",
+                    "emocion": "Kahty_Sprites_Neutral_0"
                 }
             ],
             "EOS": false
@@ -23,28 +19,24 @@
             "id":  1,
             "escena": 1,
             "ruta": 0,
-            "texto": "mimi",
-            "emisor": "Panchitoo",
+            "texto": "Mi comida favorita es..",
+            "emisor": "Kathy",
             "opciones": [
                 {
                     "num": 1,
-                    "texto": "Op1 11111",
+                    "texto": "Pizza",
                     "rutaA": 2
                 },
                 {
                     "num": 2,
-                    "texto": "Opcion 2",
+                    "texto": "Spaghetti",
                     "rutaA": 3
                 }
             ],
             "emociones": [
                 {
-                    "personaje": "Panchito",
-                    "emocion": "Panchito_Feliz"
-                },
-                {
-                    "personaje": "Panchitoo",
-                    "emocion": "Panchitoo_Feliz"
+                    "personaje": "Kathy",
+                    "emocion": "Kahty_Sprites_Confident_0"
                 }
             ],
             "EOS": false
@@ -53,17 +45,13 @@
             "id":  2,
             "escena": 1,
             "ruta": 0,
-            "texto": "Opción 1 seleccinada!!",
+            "texto": "Mmmm... Me encanta la pizza!",
             "emisor": "Panchitoo",
             "opciones": [],
             "emociones": [
                 {
-                    "personaje": "Panchito",
-                    "emocion": "Panchito_Feliz"
-                },
-                {
-                    "personaje": "Panchitoo",
-                    "emocion": "Panchitoo_Feliz"
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Sprites_Happy_0"
                 }
             ],
             "EOS": true
@@ -72,17 +60,13 @@
             "id":  3,
             "escena": 1,
             "ruta": 0,
-            "texto": "Se seleccionó la opción 2",
+            "texto": "El Spaghetti es delicioso",
             "emisor": "Panchitoo",
             "opciones": [],
             "emociones": [
                 {
-                    "personaje": "Panchito",
-                    "emocion": "Panchito_Feliz"
-                },
-                {
-                    "personaje": "Panchitoo",
-                    "emocion": "Panchitoo_Feliz"
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Sprites_Happy_1"
                 }
             ],
             "EOS": false
@@ -96,12 +80,8 @@
             "opciones": [],
             "emociones": [
                 {
-                    "personaje": "Panchito",
-                    "emocion": "Panchito_Feliz"
-                },
-                {
-                    "personaje": "Panchitoo",
-                    "emocion": "Panchitoo_Feliz"
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Sprites_Happy_0"
                 }
             ],
             "EOS": true
