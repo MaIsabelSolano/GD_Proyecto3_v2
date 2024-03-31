@@ -27,6 +27,9 @@ public class DialogueMng : MonoBehaviour
   public List<Emotion> currentEmotes = new List<Emotion>();
 
   int currentDialogue = 0;
+  [SerializeField] RectTransform canvasRectTransform;
+
+  private Dictionary<string, Sprite[]> characterSprites = new Dictionary<string, Sprite[]>();
   
   
   // Start is called before the first frame update
@@ -37,14 +40,8 @@ public class DialogueMng : MonoBehaviour
       Debug.Log(dialoguesJSON);
 
 
-      Debug.Log(Application.dataPath);
       KathySprites = Resources.LoadAll<Sprite>("Sprites/Kathy/");
-      Debug.Log(KathySprites.Length);
-      foreach (Sprite s in KathySprites)
-        {
-            // Do something with the sprite
-            Debug.Log(s.name);
-        }
+      loadCharacterSprites();
 
       // Deserialize the JSON data into a DialogueList object
       DialogueList dialogueList = JsonUtility.FromJson<DialogueList>(dialoguesJSON.text);
@@ -52,9 +49,9 @@ public class DialogueMng : MonoBehaviour
       // Assign the list of dialogues from the DialogueList object to Dialogues
       Dialogues = dialogueList.Dialogos;
 
-      Debug.Log(Dialogues.Count);
-      Debug.Log(Dialogues[0].emisor);
-      Debug.Log(Dialogues[0].texto);
+      // Debug.Log(Dialogues.Count);
+      // Debug.Log(Dialogues[0].emisor);
+      // Debug.Log(Dialogues[0].texto);
 
       OptionBtn1.onClick.AddListener(changeToOp1);
       OptionBtn2.onClick.AddListener(changeToOp2);
@@ -96,30 +93,43 @@ public class DialogueMng : MonoBehaviour
           updateEmotions();
         }
       }
+    }   
+  }
+
+  void loadCharacterSprites() {
+    string[] characterNames = {"Kathy", "Dad"};
+    foreach (string charName in characterNames) {
+      Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites/" + charName);
+      characterSprites.Add(charName, sprites);
     }
-      
   }
 
   void updateText() {
+    Debug.Log("updateText");
     DialogoEmisor.text = Dialogues[currentDialogue].emisor;
     DialogoTexto.text = Dialogues[currentDialogue].texto;
     hideButtons();
   }
 
   void updateEmotions() {
+    Debug.Log("updateEmotion");
     // borrar emociones anteriores
     currentEmotes = new List<Emotion>();
 
     // Esta solo es una prueba
     // TODO Modificar para poder usarse con varios sprites a la vez. 
     Sprite spriteNuevo = null;
-    foreach (Sprite sp in KathySprites) {
+    if (characterSprites.ContainsKey("Kathy")) {
+      Sprite[] KathySprites = characterSprites["Kathy"];
+      foreach (Sprite sp in KathySprites) {
       // Debug.Log("nombre sprite: " + sp.name);
       if (sp.name == Dialogues[currentDialogue].emociones[0].emocion) {
         spriteNuevo = sp;
         Debug.Log("yay");
       }
     }
+    }
+    
     if (spriteNuevo == null) {
       Debug.Log("err");
     }
@@ -127,6 +137,12 @@ public class DialogueMng : MonoBehaviour
       Debug.Log("cambio :o");
       imgTest.sprite = null;
       imgTest.sprite = spriteNuevo;
+
+      Debug.Log("posicion i");
+      Debug.Log(imgTest.transform.position);
+      imgTest.transform.position = canvasRectTransform.TransformPoint(new Vector2(0, (- canvasRectTransform.rect.height / 2f) - (- imgTest.rectTransform.rect.height/2f)));
+      Debug.Log("posicion f");
+      Debug.Log(imgTest.transform.position);
       
       // imgTest.color = Color.black;
     }
@@ -144,6 +160,7 @@ public class DialogueMng : MonoBehaviour
   }
 
   void showButtons() {
+    OptionsActive = true;
     for (int i = 0; i < Dialogues[currentDialogue].opciones.Count; i++) {
         Button button = OptionBtns[i];
         TMP_Text buttonText = button.GetComponentInChildren<TMP_Text>(); // Use TMP_Text instead of Text
