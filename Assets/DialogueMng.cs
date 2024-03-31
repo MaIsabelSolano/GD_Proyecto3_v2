@@ -22,10 +22,6 @@ public class DialogueMng : MonoBehaviour
 
   private Sprite[] KathySprites;
 
-  [SerializeField] Image imgTest;
-
-  public List<Emotion> currentEmotes = new List<Emotion>();
-
   int currentDialogue = 0;
   [SerializeField] RectTransform canvasRectTransform;
 
@@ -49,9 +45,6 @@ public class DialogueMng : MonoBehaviour
       // Assign the list of dialogues from the DialogueList object to Dialogues
       Dialogues = dialogueList.Dialogos;
 
-      // Debug.Log(Dialogues.Count);
-      // Debug.Log(Dialogues[0].emisor);
-      // Debug.Log(Dialogues[0].texto);
 
       OptionBtn1.onClick.AddListener(changeToOp1);
       OptionBtn2.onClick.AddListener(changeToOp2);
@@ -65,12 +58,7 @@ public class DialogueMng : MonoBehaviour
       OptionBtns.Add(OptionBtn4);
 
       updateText();
-
-      // prueba de busca assets 
-      // Debug.Log("children");
-      // Debug.Log(canvasRectTransform.childCount);
-      // Debug.Log(canvasRectTransform.Find("Personajes").Find("Kathy"));
-      // Debug.Log(canvasRectTransform.Find("Personajes").Find("Kathy").GetComponent<Image>());
+      updateEmotions();
 
     }
   }
@@ -78,16 +66,19 @@ public class DialogueMng : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    // no aceptar input que no sea de los botones
     if (Dialogues[currentDialogue].opciones.Count > 0) {
       if (!OptionsActive) {
         // Reactivar los botones
         showButtons();
-        updateEmotions();
+        // updateEmotions();
       }
-    } else if (Dialogues[currentDialogue].EOS) {
+    } 
+    // cambiar de escena si se llegó al final  
+    else if (Dialogues[currentDialogue].EOS) {
       // Es el final de la historia
       // TODO: Añadir lógica de cambio de escena
-      updateEmotions();
+      // updateEmotions();
     }
     else {
       // Click normal si la historia no tiene opciones
@@ -99,7 +90,8 @@ public class DialogueMng : MonoBehaviour
           updateEmotions();
         }
       }
-    }   
+    }  
+    
   }
 
   void loadCharacterSprites() {
@@ -150,6 +142,9 @@ public class DialogueMng : MonoBehaviour
     } else if (pos == "R") {
       chara.transform.position = canvasRectTransform.
         TransformPoint(new Vector2(canvasRectTransform.rect.height / 4f, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
+    } else if (pos == "L") {
+      chara.transform.position = canvasRectTransform.
+        TransformPoint(new Vector2(- canvasRectTransform.rect.height / 4f, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
     }
   }
 
@@ -175,18 +170,22 @@ public class DialogueMng : MonoBehaviour
   void changeToOp1(){
     currentDialogue = Dialogues[currentDialogue].opciones[0].rutaA;
     updateText();
+    updateEmotions();
   }
   void changeToOp2(){
     currentDialogue = Dialogues[currentDialogue].opciones[1].rutaA;
     updateText();
+    updateEmotions();
   }
   void changeToOp3(){
     currentDialogue = Dialogues[currentDialogue].opciones[2].rutaA;
     updateText();
+    updateEmotions();
   }
   void changeToOp4(){
     currentDialogue = Dialogues[currentDialogue].opciones[3].rutaA;
     updateText();
+    updateEmotions();
   }
 }
 

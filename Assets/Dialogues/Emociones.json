@@ -12,6 +12,11 @@
                     "personaje": "Kathy",
                     "emocion": "Kathy_Neutral_0",
                     "posicion": "R"
+                }, 
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Neutral_0",
+                    "posicion": "L"
                 }
             ],
             "EOS": false
@@ -39,6 +44,11 @@
                     "personaje": "Kathy",
                     "emocion": "Kathy_Confident_0",
                     "posicion": "R"
+                }, 
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Neutral_0",
+                    "posicion": "L"
                 }
             ],
             "EOS": false
@@ -55,6 +65,11 @@
                     "personaje": "Kathy",
                     "emocion": "Kathy_Happy_0",
                     "posicion": "R"
+                }, 
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Smug_0",
+                    "posicion": "L"
                 }
             ],
             "EOS": true
@@ -71,6 +86,11 @@
                     "personaje": "Kathy",
                     "emocion": "Kathy_Happy_1",
                     "posicion": "R"
+                }, 
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Thinking_0",
+                    "posicion": "L"
                 }
             ],
             "EOS": false
@@ -79,14 +99,19 @@
             "id":  4,
             "escena": 1,
             "ruta": 0,
-            "texto": "asdf",
-            "emisor": "Panchitoo",
+            "texto": "A mí me gusta más la pizza",
+            "emisor": "Papá",
             "opciones": [],
             "emociones": [
                 {
                     "personaje": "Kathy",
                     "emocion": "Kathy_Happy_0",
                     "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Thinking_0",
+                    "posicion": "L"
                 }
             ],
             "EOS": true
