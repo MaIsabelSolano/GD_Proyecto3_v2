@@ -10,7 +10,8 @@
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Neutral_0"
+                    "emocion": "Kathy_Neutral_0",
+                    "posicion": "R"
                 }
             ],
             "EOS": false
@@ -36,7 +37,8 @@
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Confident_0"
+                    "emocion": "Kathy_Confident_0",
+                    "posicion": "R"
                 }
             ],
             "EOS": false
@@ -51,7 +53,8 @@
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Happy_0"
+                    "emocion": "Kathy_Happy_0",
+                    "posicion": "R"
                 }
             ],
             "EOS": true
@@ -66,7 +69,8 @@
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Happy_1"
+                    "emocion": "Kathy_Happy_1",
+                    "posicion": "R"
                 }
             ],
             "EOS": false
@@ -81,7 +85,8 @@
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Happy_0"
+                    "emocion": "Kathy_Happy_0",
+                    "posicion": "R"
                 }
             ],
             "EOS": true

@@ -66,6 +66,12 @@ public class DialogueMng : MonoBehaviour
 
       updateText();
 
+      // prueba de busca assets 
+      // Debug.Log("children");
+      // Debug.Log(canvasRectTransform.childCount);
+      // Debug.Log(canvasRectTransform.Find("Personajes").Find("Kathy"));
+      // Debug.Log(canvasRectTransform.Find("Personajes").Find("Kathy").GetComponent<Image>());
+
     }
   }
 
@@ -113,43 +119,38 @@ public class DialogueMng : MonoBehaviour
 
   void updateEmotions() {
     Debug.Log("updateEmotion");
-    // borrar emociones anteriores
-    currentEmotes = new List<Emotion>();
 
-    // Esta solo es una prueba
-    // TODO Modificar para poder usarse con varios sprites a la vez. 
-    Sprite spriteNuevo = null;
-    if (characterSprites.ContainsKey("Kathy")) {
-      Sprite[] KathySprites = characterSprites["Kathy"];
-      foreach (Sprite sp in KathySprites) {
-      // Debug.Log("nombre sprite: " + sp.name);
-      if (sp.name == Dialogues[currentDialogue].emociones[0].emocion) {
-        spriteNuevo = sp;
-        Debug.Log("yay");
+    foreach (Emotion charEmotion in Dialogues[currentDialogue].emociones) {
+      if (characterSprites.ContainsKey(charEmotion.personaje)) {
+        Debug.Log("contains key");
+        foreach (Sprite sp in characterSprites[charEmotion.personaje]) {
+          Debug.Log("Sprites de " + characterSprites[charEmotion.personaje]);
+          if (sp.name == charEmotion.emocion) {
+            Transform currChar = canvasRectTransform.Find("Personajes").Find(charEmotion.personaje);
+            if (currChar != null) {
+              Image characterImg = currChar.GetComponent<Image>();
+              // cambiar imagen
+              characterImg.sprite  = sp;
+
+              // cambiar posición
+              updateCharacterPosition(charEmotion.posicion, characterImg);
+
+              // TODO: Efectos
+            }
+          }
+        }
       }
     }
-    }
-    
-    if (spriteNuevo == null) {
-      Debug.Log("err");
-    }
-    else {
-      Debug.Log("cambio :o");
-      imgTest.sprite = null;
-      imgTest.sprite = spriteNuevo;
+  }
 
-      Debug.Log("posicion i");
-      Debug.Log(imgTest.transform.position);
-      imgTest.transform.position = canvasRectTransform.TransformPoint(new Vector2(0, (- canvasRectTransform.rect.height / 2f) - (- imgTest.rectTransform.rect.height/2f)));
-      Debug.Log("posicion f");
-      Debug.Log(imgTest.transform.position);
-      
-      // imgTest.color = Color.black;
+  void updateCharacterPosition(string pos, Image chara) {
+    if (pos == "C") {
+      chara.transform.position = canvasRectTransform.
+        TransformPoint(new Vector2(0, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
+    } else if (pos == "R") {
+      chara.transform.position = canvasRectTransform.
+        TransformPoint(new Vector2(canvasRectTransform.rect.height / 4f, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
     }
-    // currentEmotes = Dialogues[currentDialogue].emociones;
-    
-    Debug.Log(Dialogues[currentDialogue].emociones[0].personaje);
-    Debug.Log(Dialogues[currentDialogue].emociones[0].emocion);
   }
 
   void hideButtons() {
@@ -229,4 +230,5 @@ public class Emotion
 {
     public string personaje;
     public string emocion;
+    public string posicion;
 }
