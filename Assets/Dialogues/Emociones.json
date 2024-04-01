@@ -4,8 +4,8 @@
             "id":  0,
             "escena": 1,
             "ruta": 0,
-            "texto": "Hola, soy Kathy y esta es una prueba de Diálogo",
-            "emisor": "Kathy",
+            "texto": "Dios mio, no puedo creer que nuestra pequeña Katherine ya se va del nido",
+            "emisor": "Papá",
             "opciones": [],
             "emociones": [
                 {
@@ -15,50 +15,52 @@
                 }, 
                 {
                     "personaje": "Dad",
-                    "emocion": "Dad_Neutral_0",
+                    "emocion": "Dad_Crying_0",
                     "posicion": "L"
                 }
             ],
+            "next": 1,
             "EOS": false
         },
         {
             "id":  1,
             "escena": 1,
             "ruta": 0,
-            "texto": "Mi comida favorita es..",
-            "emisor": "Kathy",
+            "texto": "Kathy... No nos dejes",
+            "emisor": "Papá",
             "opciones": [
                 {
                     "num": 1,
-                    "texto": "Pizza",
+                    "texto": "No es para tanto",
                     "rutaA": 2
                 },
                 {
                     "num": 2,
-                    "texto": "Spaghetti",
+                    "texto": "Ya no soy una niña",
                     "rutaA": 3
                 }
             ],
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Confident_0",
+                    "emocion": "Kathy_Neutral_0",
                     "posicion": "R"
                 }, 
                 {
                     "personaje": "Dad",
-                    "emocion": "Dad_Neutral_0",
+                    "emocion": "Dad_Crying_0",
                     "posicion": "L"
                 }
             ],
+            "next": 1,
             "EOS": false
         },
         {
             "id":  2,
             "escena": 1,
             "ruta": 0,
-            "texto": "Mmmm... Me encanta la pizza!",
-            "emisor": "Panchitoo",
+            "texto": "Ay papá, no es para tanto. Ahora viviré como a 30 minutos de ustedes. Si necesitan cualquier cosa ahí estaré",
+            "emisor": "Kathy",
             "opciones": [],
             "emociones": [
                 {
@@ -68,53 +70,111 @@
                 }, 
                 {
                     "personaje": "Dad",
-                    "emocion": "Dad_Smug_0",
+                    "emocion": "Dad_Worried_1",
                     "posicion": "L"
                 }
             ],
-            "EOS": true
+            "next": 4,
+            "EOS": false
         },
         {
             "id":  3,
             "escena": 1,
             "ruta": 0,
-            "texto": "El Spaghetti es delicioso",
-            "emisor": "Panchitoo",
+            "texto": "Ay papá, ya no soy una niña. Tengo ya 21 años, ya era hora de independizarme",
+            "emisor": "Kathy",
             "opciones": [],
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Happy_1",
+                    "emocion": "Kathy_Annoyed_0",
                     "posicion": "R"
                 }, 
                 {
                     "personaje": "Dad",
-                    "emocion": "Dad_Thinking_0",
+                    "emocion": "Dad_Worried_1",
                     "posicion": "L"
                 }
             ],
+            "next": 4,
             "EOS": false
         },
         {
             "id":  4,
             "escena": 1,
             "ruta": 0,
-            "texto": "A mí me gusta más la pizza",
+            "texto": "Aún así no me puedo creer que hayamos encontrado esta casa a tan bajo precio. Debe haber algo malo con ella, no te mudes mejor regresa con nosotros, Kathy",
             "emisor": "Papá",
-            "opciones": [],
+            "opciones": [
+                {
+                    "num": 1,
+                    "texto": "Ahg",
+                    "rutaA": 5
+                },
+                {
+                    "num": 2,
+                    "texto": "Tienes razón",
+                    "rutaA": 6
+                }
+            ],
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Happy_0",
+                    "emocion": "Kathy_Happy_1",
                     "posicion": "R"
                 },
                 {
                     "personaje": "Dad",
-                    "emocion": "Dad_Thinking_0",
+                    "emocion": "Dad_Worried_0",
                     "posicion": "L"
                 }
             ],
-            "EOS": true
+            "next": 6,
+            "EOS": false
+        },
+        {
+            "id":  5,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Ya pasamos por esto papá. Además, ya la hemos revisado cientos de veces, y definitivamente está en buen estado",
+            "emisor": "Kathy",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Confident_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 7,
+            "EOS": false
+        },
+        {
+            "id":  6,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Mmm... Siendo honesta, también creo que es un poco sospechoso, pero luego de la revisión que le dimos, estamos seguros que está en perfecto estado",
+            "emisor": "Kathy",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Uhm_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 7,
+            "EOS": false
         }
     ]
     

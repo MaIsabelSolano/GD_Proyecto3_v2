@@ -85,7 +85,7 @@ public class DialogueMng : MonoBehaviour
       if (Input.GetMouseButtonDown(0)) {
         Debug.Log("click");
         if (currentDialogue < Dialogues.Count && currentDialogue >= 0) {
-          currentDialogue ++;
+          currentDialogue = Dialogues[currentDialogue].next; // Cambiar el diálogo
           updateText();
           updateEmotions();
         }
@@ -128,6 +128,7 @@ public class DialogueMng : MonoBehaviour
               updateCharacterPosition(charEmotion.posicion, characterImg);
 
               // TODO: Efectos
+              
             }
           }
         }
@@ -145,6 +146,9 @@ public class DialogueMng : MonoBehaviour
     } else if (pos == "L") {
       chara.transform.position = canvasRectTransform.
         TransformPoint(new Vector2(- canvasRectTransform.rect.height / 4f, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
+      // Vector2 vec = chara.transform.localScale;
+      // vec.x *= -1; 
+      // chara.transform.localScale = vec;
     }
   }
 
@@ -211,6 +215,7 @@ public class Dialogue
   public string emisor;
   public List<Option> opciones;
   public List<Emotion> emociones;
+  public int next;
   public bool EOS; //End of Story
 }
 
