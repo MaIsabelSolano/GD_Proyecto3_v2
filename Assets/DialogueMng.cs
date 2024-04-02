@@ -139,16 +139,20 @@ public class DialogueMng : MonoBehaviour
   void updateCharacterPosition(string pos, Image chara) {
     if (pos == "C") {
       chara.transform.position = canvasRectTransform.
-        TransformPoint(new Vector2(0, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
+        TransformPoint(new Vector2(0, (- canvasRectTransform.rect.width / 2f) - (- chara.rectTransform.rect.height/2f)));
     } else if (pos == "R") {
       chara.transform.position = canvasRectTransform.
-        TransformPoint(new Vector2(canvasRectTransform.rect.height / 4f, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
+        TransformPoint(new Vector2(canvasRectTransform.rect.width / 4f, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
     } else if (pos == "L") {
       chara.transform.position = canvasRectTransform.
-        TransformPoint(new Vector2(- canvasRectTransform.rect.height / 4f, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
+        TransformPoint(new Vector2(- canvasRectTransform.rect.width / 4f, (- canvasRectTransform.rect.height / 2f) - (- chara.rectTransform.rect.height/2f)));
       // Vector2 vec = chara.transform.localScale;
       // vec.x *= -1; 
       // chara.transform.localScale = vec;
+    } else if (pos == "Out") {
+      // Afuera del mapa
+      chara.transform.position = canvasRectTransform.
+        TransformPoint(new Vector2(2 * canvasRectTransform.rect.width, 2 * canvasRectTransform.rect.height));
     }
   }
 

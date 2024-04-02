@@ -142,7 +142,7 @@
             "emociones": [
                 {
                     "personaje": "Kathy",
-                    "emocion": "Kathy_Confident_0",
+                    "emocion": "Kathy_Annoyed_0",
                     "posicion": "R"
                 },
                 {
@@ -174,6 +174,259 @@
                 }
             ],
             "next": 7,
+            "EOS": false
+        },
+        {
+            "id":  7,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Aún así me da mala espina... ¡Mejor no te mudes!",
+            "emisor": "Papá",
+            "opciones": [
+                {
+                    "num": 1,
+                    "texto": "Pero es importante",
+                    "rutaA": 8
+                },
+                {
+                    "num": 2,
+                    "texto": "No empieces",
+                    "rutaA": 11
+                }
+            ],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Neutral_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_1",
+                    "posicion": "L"
+                }
+            ],
+            "next": 7,
+            "EOS": false
+        },
+        {
+            "id":  8,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Pero este momento es muy importante para mí, papá",
+            "emisor": "Kathy",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Pleased_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 9,
+            "EOS": false
+        },
+        {
+            "id":  9,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Aquí podré finalmente tocar música sin molestarte a ti, a MAMÁ y a ninguno de mis hermanos. Y ellos tampoco podrán interrumpir ninguna de mis grabaciones",
+            "emisor": "Kathy",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Happy_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 10,
+            "EOS": false
+        },
+        {
+            "id":  10,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Gracias por tu preocupación, papá. Pero te aseguro que estaré bien. Confía en mí",
+            "emisor": "Kathy",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Confident_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 14,
+            "EOS": false
+        },
+        {
+            "id":  11,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Ay papá, no empieces con eso otra vez. Este es un momento muy importante para mí",
+            "emisor": "Kathy",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Annoyed_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 12,
+            "EOS": false
+        },
+        {
+            "id":  12,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Aquí podré finalmente tocar música sin molestarte a ti, a MAMÁ y a ninguno de mis hermanos. Y ellos tampoco podrán interrumpir ninguna de mis grabaciones",
+            "emisor": "Kathy",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Neutral_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 13,
+            "EOS": false
+        },
+        {
+            "id":  13,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Ahí verás que no me pasará nada malo. Todo estará bien. Confía en mí",
+            "emisor": "Kathy",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Confident_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 14,
+            "EOS": false
+        },
+        {
+            "id":  14,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Claro que confío en tí, Kathy",
+            "emisor": "Papá",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Confident_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Warm_0",
+                    "posicion": "L"
+                }
+            ],
+            "next": 15,
+            "EOS": true
+        },
+        {
+            "id":  15,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Tiempo después...",
+            "emisor": " ",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Confident_0",
+                    "posicion": "Out"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Warm_0",
+                    "posicion": "Out"
+                }
+            ],
+            "next": 16,
+            "EOS": false
+        },
+        {
+            "id":  16,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Odio no poder quedarme aquí para ayudarte mucho más, pero como es la rutina, tengo que ir por tu madre y por tus hermanos",
+            "emisor": "Papá",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Pleased_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_1",
+                    "posicion": "L"
+                }
+            ],
+            "next": 17,
+            "EOS": false
+        },
+        {
+            "id":  17,
+            "escena": 1,
+            "ruta": 0,
+            "texto": "Odio no poder quedarme aquí para ayudarte mucho más, pero como es la rutina, tengo que ir por tu madre y por tus hermanos",
+            "emisor": "Papá",
+            "opciones": [],
+            "emociones": [
+                {
+                    "personaje": "Kathy",
+                    "emocion": "Kathy_Pleased_0",
+                    "posicion": "R"
+                },
+                {
+                    "personaje": "Dad",
+                    "emocion": "Dad_Worried_1",
+                    "posicion": "L"
+                }
+            ],
+            "next": 17,
             "EOS": false
         }
     ]
