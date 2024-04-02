@@ -213,7 +213,6 @@ public class DialogueList
 public class Dialogue
 {
   public int id;
-  public int escena;
   public int ruta;
   public string texto;
   public string emisor;

@@ -2,7 +2,6 @@
     "Dialogos": [
         {
             "id":  0,
-            "escena": 1,
             "ruta": 0,
             "texto": "Dios mio, no puedo creer que nuestra pequeña Katherine ya se va del nido",
             "emisor": "Papá",
@@ -24,7 +23,6 @@
         },
         {
             "id":  1,
-            "escena": 1,
             "ruta": 0,
             "texto": "Kathy... No nos dejes",
             "emisor": "Papá",
@@ -57,7 +55,6 @@
         },
         {
             "id":  2,
-            "escena": 1,
             "ruta": 0,
             "texto": "Ay papá, no es para tanto. Ahora viviré como a 30 minutos de ustedes. Si necesitan cualquier cosa ahí estaré",
             "emisor": "Kathy",
@@ -79,7 +76,6 @@
         },
         {
             "id":  3,
-            "escena": 1,
             "ruta": 0,
             "texto": "Ay papá, ya no soy una niña. Tengo ya 21 años, ya era hora de independizarme",
             "emisor": "Kathy",
@@ -101,7 +97,6 @@
         },
         {
             "id":  4,
-            "escena": 1,
             "ruta": 0,
             "texto": "Aún así no me puedo creer que hayamos encontrado esta casa a tan bajo precio. Debe haber algo malo con ella, no te mudes mejor regresa con nosotros, Kathy",
             "emisor": "Papá",
@@ -134,7 +129,6 @@
         },
         {
             "id":  5,
-            "escena": 1,
             "ruta": 0,
             "texto": "Ya pasamos por esto papá. Además, ya la hemos revisado cientos de veces, y definitivamente está en buen estado",
             "emisor": "Kathy",
@@ -156,7 +150,6 @@
         },
         {
             "id":  6,
-            "escena": 1,
             "ruta": 0,
             "texto": "Mmm... Siendo honesta, también creo que es un poco sospechoso, pero luego de la revisión que le dimos, estamos seguros que está en perfecto estado",
             "emisor": "Kathy",
@@ -178,7 +171,6 @@
         },
         {
             "id":  7,
-            "escena": 1,
             "ruta": 0,
             "texto": "Aún así me da mala espina... ¡Mejor no te mudes!",
             "emisor": "Papá",
@@ -211,7 +203,6 @@
         },
         {
             "id":  8,
-            "escena": 1,
             "ruta": 0,
             "texto": "Pero este momento es muy importante para mí, papá",
             "emisor": "Kathy",
@@ -233,7 +224,6 @@
         },
         {
             "id":  9,
-            "escena": 1,
             "ruta": 0,
             "texto": "Aquí podré finalmente tocar música sin molestarte a ti, a MAMÁ y a ninguno de mis hermanos. Y ellos tampoco podrán interrumpir ninguna de mis grabaciones",
             "emisor": "Kathy",
@@ -255,7 +245,6 @@
         },
         {
             "id":  10,
-            "escena": 1,
             "ruta": 0,
             "texto": "Gracias por tu preocupación, papá. Pero te aseguro que estaré bien. Confía en mí",
             "emisor": "Kathy",
@@ -277,7 +266,6 @@
         },
         {
             "id":  11,
-            "escena": 1,
             "ruta": 0,
             "texto": "Ay papá, no empieces con eso otra vez. Este es un momento muy importante para mí",
             "emisor": "Kathy",
@@ -299,7 +287,6 @@
         },
         {
             "id":  12,
-            "escena": 1,
             "ruta": 0,
             "texto": "Aquí podré finalmente tocar música sin molestarte a ti, a MAMÁ y a ninguno de mis hermanos. Y ellos tampoco podrán interrumpir ninguna de mis grabaciones",
             "emisor": "Kathy",
@@ -321,7 +308,6 @@
         },
         {
             "id":  13,
-            "escena": 1,
             "ruta": 0,
             "texto": "Ahí verás que no me pasará nada malo. Todo estará bien. Confía en mí",
             "emisor": "Kathy",
@@ -343,7 +329,6 @@
         },
         {
             "id":  14,
-            "escena": 1,
             "ruta": 0,
             "texto": "Claro que confío en tí, Kathy",
             "emisor": "Papá",
@@ -365,7 +350,6 @@
         },
         {
             "id":  15,
-            "escena": 1,
             "ruta": 0,
             "texto": "Tiempo después...",
             "emisor": " ",
@@ -387,7 +371,6 @@
         },
         {
             "id":  16,
-            "escena": 1,
             "ruta": 0,
             "texto": "Odio no poder quedarme aquí para ayudarte mucho más, pero como es la rutina, tengo que ir por tu madre y por tus hermanos",
             "emisor": "Papá",
@@ -409,7 +392,6 @@
         },
         {
             "id":  17,
-            "escena": 1,
             "ruta": 0,
             "texto": "Odio no poder quedarme aquí para ayudarte mucho más, pero como es la rutina, tengo que ir por tu madre y por tus hermanos",
             "emisor": "Papá",
