@@ -5,6 +5,7 @@ using TMPro;
 using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueMng : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class DialogueMng : MonoBehaviour
   [SerializeField] RectTransform canvasRectTransform;
 
   private Dictionary<string, Sprite[]> characterSprites = new Dictionary<string, Sprite[]>();
+
+  private SceneMng sceneMng;
   
   
   // Start is called before the first frame update
@@ -33,8 +36,9 @@ public class DialogueMng : MonoBehaviour
   {
     // obtener la data del JSON
     if (dialoguesJSON != null) {
-      Debug.Log(dialoguesJSON);
+      // Debug.Log(dialoguesJSON);
 
+      sceneMng = new SceneMng();
 
       KathySprites = Resources.LoadAll<Sprite>("Sprites/Kathy/");
       loadCharacterSprites();
@@ -76,9 +80,10 @@ public class DialogueMng : MonoBehaviour
     } 
     // cambiar de escena si se llegó al final  
     else if (Dialogues[currentDialogue].EOS) {
-      // Es el final de la historia
-      // TODO: Añadir lógica de cambio de escena
-      // updateEmotions();
+      if (Input.GetMouseButtonDown(0)) {
+        // terminar la escena
+        handleEOS();
+      }
     }
     else {
       // Click normal si la historia no tiene opciones
@@ -194,6 +199,13 @@ public class DialogueMng : MonoBehaviour
     currentDialogue = Dialogues[currentDialogue].opciones[3].rutaA;
     updateText();
     updateEmotions();
+  }
+
+  /**
+  * Handle End of Scene
+  */
+  void handleEOS() {
+    sceneMng.loadHouse_Livingroom();
   }
 }
 
